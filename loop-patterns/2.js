@@ -37,5 +37,46 @@ for (let i = 0; i < n; i++) {
   for (let j = 0; j < i + 1; j++) {
     rows += i + 1;
   }
+  //   console.log(rows);
+}
+
+//12345
+//1234
+//123
+//12
+//1
+
+for (let i = 0; i < n; i++) {
+  let rows = "";
+  for (let j = n; j > i; j--) {
+    rows += n - j + 1;
+  }
+  //   console.log(rows);
+}
+
+for (let i = 0; i < n; i++) {
+  let rows = "";
+  for (let j = 0; j < n - i; j++) {
+    rows += j + 1;
+  }
+  //   console.log(rows);
+}
+
+// '    *'
+// '   **'
+// '  ***'
+// ' ****'
+// '*****'
+
+for (let i = 0; i < n; i++) {
+  let rows = "";
+  //for spaces
+  for (let j = 0; j < n - (i + 1); j++) {
+    rows += " ";
+  }
+  //for stars
+  for (let k = 0; k < i + 1; k++) {
+    rows += "*";
+  }
   console.log(rows);
 }
