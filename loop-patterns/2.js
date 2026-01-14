@@ -78,5 +78,45 @@ for (let i = 0; i < n; i++) {
   for (let k = 0; k < i + 1; k++) {
     rows += "*";
   }
-  console.log(rows);
+  //   console.log(rows);
+}
+
+// '1'
+// '10'
+// '101'
+// '1010'
+// '10101'
+
+for (let i = 0; i < n; i++) {
+  let rows = "";
+  let toggle = 1;
+  for (let j = 0; j < i + 1; j++) {
+    rows += toggle;
+    if (toggle == 1) {
+      toggle = 0;
+    } else {
+      toggle = 1;
+    }
+  }
+  //   console.log(rows);
+}
+
+// '1'
+// '01'
+// '010'
+// '1010'
+// '10101'
+
+let toggle = 1;
+for (let i = 0; i < n; i++) {
+  let rows = "";
+  for (let j = 0; j < i + 1; j++) {
+    rows += toggle;
+    if (toggle == 1) {
+      toggle = 0;
+    } else {
+      toggle = 1;
+    }
+  }
+  //   console.log(rows);
 }
