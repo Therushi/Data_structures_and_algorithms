@@ -33,4 +33,20 @@ function keysOfobject(obj) {
   }
 }
 
+function getKeys(objfile, inpPath = "") {
+  for (let item in objfile) {
+    // let path = inpPath ? inpPath + "." + item : item;
+    let path = inpPath ? `${inpPath}.${item}` : item;
+    if (
+      objfile[item] &&
+      typeof objfile[item] === "object" &&
+      !Array.isArray(objfile[item])
+    ) {
+      getKeys(objfile[item], path);
+    } else {
+      console.log(path);
+    }
+  }
+}
+
 keysOfobject(obj);
